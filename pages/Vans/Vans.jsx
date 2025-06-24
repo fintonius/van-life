@@ -2,7 +2,13 @@ import React from "react"
 import { Link, useSearchParams } from "react-router-dom"
 import { getVans, getVan } from "../../api"
 
-export default function Vans() {
+export function loader1() {
+    return 'the data is hairy balls'
+}
+
+export default function Vans({loader}) {
+    const testycle = loader()
+    console.log('this is loader', testycle)
     const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
     const [loading, setLoading] = React.useState(false)
