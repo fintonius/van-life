@@ -33,7 +33,7 @@ function App() {
       <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="vans" element={<Vans loader={vansLoader}/>} />
+          <Route path="vans" element={<Vans />} loader={vansLoader} />
           <Route path="vans/:id" element={<VanDetail />} />
           <Route
             path="login"

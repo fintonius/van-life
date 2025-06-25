@@ -30,7 +30,7 @@ const db = getFirestore(app)
 // this is from Bob's preference to not have to work with nested functions when dealing with the 'collection' function. This is making a reference to the 'vans' collection that is returned from the Firebase db. Not sure how this is any different but hey ho.
 // this is fetching (sort of?!) the 'vans' collection I created in Firebase
 const vansCollectionRef = collection(db, 'vans')
-console.log('thi is vanscollection', vansCollectionRef)
+
 export async function getVans() {
     // getDocs returns a promise we need to use await. It returns a "snapshot" of our data as an array from whatever source we provide. 
     const snapshot = await getDocs(vansCollectionRef)
